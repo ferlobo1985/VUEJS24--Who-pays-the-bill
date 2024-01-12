@@ -55,6 +55,13 @@ createApp({
         }
         const generateResult = () => {
             let rand = getRandomName();
+
+            if(data.result !== ''){
+                while(rand === data.result){
+                    rand = getRandomName();
+                }
+            }
+            
             data.result = rand;
         }
 
@@ -63,12 +70,27 @@ createApp({
             data.state = false;
         }
 
+        const resetApp = () => {
+            data.state = true;
+            data.inputName='';
+            data.names=[];
+            data.error='';
+            data.showError= false;
+            data.result='';
+        }
+
+        const getNewResult = () => {
+            generateResult();
+        }
+
         return {
             data,
             addNameToList,
             removeName,
             isReady,
-            showResults
+            showResults,
+            resetApp,
+            getNewResult
         }
     }
 }).mount('#app')
