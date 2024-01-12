@@ -18,7 +18,20 @@
 </head>
 <body>
     <div id="app">
+        <div id="names" class="container" v-if="data.state">
+            <div class="logo">
+                <h1>Who pays the bill</h1>
+            </div>
 
+            <div class="input_container">
+                <input type="text" v-model.trim="data.inputName"/>
+                <button @click="addNameToList">Add</button>
+            </div>
+
+        </div>
+        <div id="results" class="container" v-if="!data.state">
+            aaaa
+        </div>
     </div>
 </body>
 <script src="js/app.js"></script>
