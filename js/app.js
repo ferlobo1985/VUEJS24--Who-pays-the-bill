@@ -17,11 +17,27 @@ createApp({
         const addNameToList = () => {
             const userName = data.inputName;
 
-            data.names.push(userName);
-            data.inputName = '';
+            if(validate(userName)){
+                data.names.push(userName);
+                data.inputName = '';
+                data.showError = false;
+            } else {
+                data.showError = true;
+            }
+        }
 
-            console.log(data.names)
+        const validate = (value) => {
+            data.error = '';
+            if(value === ''){
+                data.error = 'Sorry, no empty name'
+                return false;
+            }
 
+            if(data.names.includes(value)){
+                data.error = 'Sorry, names must be unique'
+                return false;
+            }
+            return true
         }
 
 

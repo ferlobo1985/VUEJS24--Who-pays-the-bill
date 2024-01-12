@@ -28,6 +28,14 @@
                 <button @click="addNameToList">Add</button>
             </div>
 
+            <div
+                class="error_label animate__animated animate__fadeInDown"
+                v-if="data.showError"
+            >
+                {{ data.error }}
+            </div>
+
+
             <div class="list_of_names">
                 <div
                     v-for="(name,index) in data.names"
