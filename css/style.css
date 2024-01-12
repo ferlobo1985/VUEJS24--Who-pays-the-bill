@@ -1,0 +1,129 @@
+body {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .container {
+    min-height: 300px;
+    width: 360px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .logo h1 {
+    font-family: "Pacifico", cursive;
+    color: #db3eb1;
+    text-decoration: underline;
+    text-decoration-color: #41b6e6;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .input_container {
+    display: flex;
+  }
+  input:focus {
+    outline: none;
+  }
+  input {
+    flex-grow: 1;
+    border: 1px solid #dddddd;
+    background: #f2f2f2;
+    font-size: 20px;
+    border-radius: 5px 0px 0px 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    border-radius: 0px 5px 5px 0px;
+    background: #41b6e6;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #78c1e0;
+  }
+  
+  .list_of_names {
+    padding: 20px 0px;
+    cursor: pointer;
+  }
+  
+  .list_of_names div {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #41b6e6;
+    color: #ffffff;
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  
+  .list_of_names div:hover {
+    background: #607d8b;
+  }
+  
+  .error_label {
+    color: #f44336;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .action_button {
+    cursor: pointer;
+    border: 1px solid #e265b1;
+    color: #e265b1;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 11px;
+    margin: 0 auto;
+  }
+  
+  .action_button.btn2 {
+    border: 1px solid #42b6e6;
+    color: #42b6e6;
+  }
+  .action_button.btn2:hover {
+    background: #42b6e6;
+    color: #ffffff;
+  }
+  
+  .action_button:hover {
+    background: #db3eb1;
+    color: #ffffff;
+  }
+  
+  .result_value {
+    font-size: 60px;
+    color: #41b6e6;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .result_container h1 {
+    font-family: "Pacifico";
+    color: #e265b1;
+    text-decoration: underline;
+    text-decoration-color: #41b6e6;
+  }
+  
