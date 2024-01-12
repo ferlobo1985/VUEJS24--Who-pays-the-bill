@@ -50,9 +50,16 @@ createApp({
             data.names.splice(index,1)
         }
 
+        const getRandomName = () => {
+            return data.names[Math.floor(Math.random() * data.names.length)];
+        }
+        const generateResult = () => {
+            let rand = getRandomName();
+            data.result = rand;
+        }
 
         const showResults = () =>{
-            /// calculate the looser
+            generateResult()
             data.state = false;
         }
 
