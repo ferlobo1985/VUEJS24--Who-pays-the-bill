@@ -11,7 +11,12 @@ const DEAFULT_STATE = {
 
 createApp({
     setup(){
-        const data = reactive(DEAFULT_STATE)
+        const data = reactive(DEAFULT_STATE);
+
+        /// computed
+        const isReady = computed(()=>{
+            return data.names.length > 1;
+        })
 
         /// methods
         const addNameToList = () => {
@@ -46,11 +51,17 @@ createApp({
         }
 
 
+        const showResults = () =>{
+            /// calculate the looser
+            data.state = false;
+        }
 
         return {
             data,
             addNameToList,
-            removeName
+            removeName,
+            isReady,
+            showResults
         }
     }
 }).mount('#app')

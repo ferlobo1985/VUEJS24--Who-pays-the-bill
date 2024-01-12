@@ -35,7 +35,6 @@
                 {{ data.error }}
             </div>
 
-
             <div class="list_of_names">
                 <div
                     v-for="(name,index) in data.names"
@@ -47,10 +46,28 @@
                 </div>
             </div>
 
+            <div
+                v-if="isReady"
+                class="animate__animated animate__bounceIn"
+            >
+                <div class="action_button" @click="showResults">
+                    Check the looser
+                </div>
+            </div>
+
+
 
         </div>
         <div id="results" class="container" v-if="!data.state">
-            aaaa
+            <div class="result_container">
+                <h1>The looser is:</h1>
+                <div class="result_value">
+                    Mike
+                </div>
+
+
+                
+            </div>
         </div>
     </div>
 </body>
