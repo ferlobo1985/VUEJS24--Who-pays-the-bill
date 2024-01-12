@@ -28,6 +28,18 @@
                 <button @click="addNameToList">Add</button>
             </div>
 
+            <div class="list_of_names">
+                <div
+                    v-for="(name,index) in data.names"
+                    :key="name"
+                    @click="removeName(index)"
+                    class="animate__animated animate__fadeIn"
+                >   
+                    {{ name }}
+                </div>
+            </div>
+
+
         </div>
         <div id="results" class="container" v-if="!data.state">
             aaaa
